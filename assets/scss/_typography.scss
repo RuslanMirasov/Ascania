@@ -1,0 +1,35 @@
+.titles {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 15px;
+}
+
+.title {
+  display: block;
+  position: relative;
+  width: auto;
+  text-transform: uppercase;
+  font-size: 64px;
+  line-height: 1.125;
+  font-weight: 400;
+  &.semibold {
+    font-weight: 500;
+  }
+  &.bold {
+    font-weight: 600;
+  }
+  &.white {
+    color: var(--white);
+  }
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+}

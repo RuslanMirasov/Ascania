@@ -1,0 +1,25 @@
+:root {
+  --font: 'notosans', sans-serif;
+  --semi: 'notosans-semicondenced', sans-serif;
+
+  --white: #ffffff;
+  --black: #1e222b;
+  --blue: #64aae1;
+  --green: #99d866;
+  --green-dark: #96c79b;
+  --invalid: #ff4053;
+}
+
+@import 'fonts';
+@import 'mixins';
+@import 'animations';
+@import 'preloader';
+@import 'reset';
+@import 'swiper';
+@import 'header';
+@import 'buttons';
+@import 'typography';
+@import 'forms';
+@import 'footer';
+@import 'popup';
+@import 'section__hero';

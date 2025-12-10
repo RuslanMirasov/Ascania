@@ -1,0 +1,19 @@
+.section--hero {
+  min-height: 100svh;
+  background: var(--white) url('../img/sky.gif') no-repeat center top;
+  background-size: 100% auto;
+
+  .titles {
+    margin-top: 150px;
+    max-width: 490px;
+    img {
+      margin-bottom: 10px;
+    }
+    .title {
+      margin: 10px 0px;
+    }
+    .subtitle {
+      max-width: 460px;
+    }
+  }
+}

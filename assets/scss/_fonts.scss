@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'notosans';
+  src: url('../fonts/notosans-regular.woff2') format('woff2'), url('../fonts/notosans-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'notosans-semicondenced';
+  src: url('../fonts/notosans_semicondensed-regular.woff2') format('woff2'), url('../fonts/notosans_semicondensed-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'notosans-semicondenced';
+  src: url('../fonts/notosans_semicondensed-medium.woff2') format('woff2'), url('../fonts/notosans_semicondensed-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'notosans-semicondenced';
+  src: url('../fonts/notosans_semicondensed-semibold.woff2') format('woff2'), url('../fonts/notosans_semicondensed-semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

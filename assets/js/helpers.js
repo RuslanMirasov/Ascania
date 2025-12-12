@@ -36,29 +36,6 @@ export const hidePreloader = () => {
   }, 2000);
 };
 
-export const fixHeaderOnScroll = () => {
-  const header = document.querySelector('.header');
-
-  if (!header) return;
-
-  const updateHeader = () => {
-    if (window.scrollY > 0) {
-      header.classList.add('fix');
-      return;
-    }
-    header.classList.remove('fix');
-  };
-
-  const throttledScroll = throttle(updateHeader, 100);
-  const debouncedScrollEnd = debounce(updateHeader, 100);
-
-  updateHeader();
-  window.addEventListener('scroll', () => {
-    throttledScroll();
-    debouncedScrollEnd();
-  });
-};
-
 export const initNavigationMenu = () => {
   const burger = document.querySelector('.burger');
   const menu = document.querySelector('.navigation ');
@@ -71,24 +48,4 @@ export const initNavigationMenu = () => {
 
   if (burger) burger.addEventListener('click', toggleMenu);
   menuLinks.forEach(link => link.addEventListener('click', toggleMenu));
-};
-
-export const checkFixedBg = () => {
-  const elements = document.querySelectorAll('[data-fixed-bg]');
-
-  if (elements.length == 0) return;
-
-  const top = window.scrollY;
-  elements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    const absTop = rect.top + window.scrollY;
-    if (absTop <= top) {
-      el.classList.add('fix');
-    } else {
-      el.classList.remove('fix');
-    }
-  });
-
-  window.addEventListener('scroll', checkFixedBg);
-  window.addEventListener('resize', checkFixedBg);
 };

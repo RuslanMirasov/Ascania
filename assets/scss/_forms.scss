@@ -1,15 +1,15 @@
 :root {
-  --input-font-family: var(--roboto);
+  --input-font-family: var(--font);
   --input-font-size: 14px;
-  --input-height: 46px;
+  --input-height: 36px;
   --input-background: #ffffff;
   --input-border: #ffffff;
-  --input-border-radius: 12px;
+  --input-border-radius: 10px;
   --input-label-color: var(--brown);
   --input-label-size: 14px;
-  --input-color: var(--brown);
+  --input-color: var(--black);
   --input-placeholder-color: var(--black);
-  --input-padding: 16px;
+  --input-padding: 12px;
 }
 
 fieldset {
@@ -28,10 +28,9 @@ fieldset {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  gap: 16px;
 
   .button {
-    margin-top: 10px;
+    margin-top: 16px;
   }
 }
 
@@ -43,17 +42,12 @@ fieldset {
   text-align: left;
 
   .label__text {
-    position: absolute;
-    transform: translate(0px, 0px) scale(1);
-    left: calc(var(--input-padding) + 1px);
-    top: 14px;
-    font-weight: 400;
-    background: #fff;
-    font-variation-settings: 'GRAD' 0, 'wdth' 128, 'slnt' 0, 'XOPQ' 96, 'YOPQ' 100, 'XTRA' 468, 'YTUC' 712, 'YTLC' 514, 'YTAS' 750, 'YTDE' -203,
-      'YTFI' 738;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
+    font-size: 10px;
+    padding-left: 4px;
+  }
+
+  &.label--checkbox {
+    margin-top: 5px;
   }
 }
 
@@ -102,8 +96,6 @@ span.input-icon {
   color: var(--input-color);
   padding: 0px var(--input-padding);
   font-weight: 400;
-  font-variation-settings: 'GRAD' 0, 'wdth' 128, 'slnt' 0, 'XOPQ' 96, 'YOPQ' 100, 'XTRA' 468, 'YTUC' 712, 'YTLC' 514, 'YTAS' 750, 'YTDE' -203,
-    'YTFI' 738;
   outline: none;
   appearance: none;
   transition: 0.3s;
@@ -112,7 +104,12 @@ span.input-icon {
 
   &.input--textarea {
     height: 100px;
-    padding: 14px var(--input-padding);
+    padding: 10px var(--input-padding);
+    margin: 0;
+
+    + .inputError {
+      margin-top: -5px;
+    }
   }
 
   &.input-search {
@@ -129,7 +126,7 @@ span.input-icon {
   }
 
   &::placeholder {
-    opacity: 0.5;
+    opacity: 0.6;
     transition: 0.3s;
     color: var(--input-placeholder-color);
     font-family: var(--input-font-family);
@@ -146,13 +143,6 @@ span.input-icon {
 
   &:focus,
   &.has-value {
-    + .label__text {
-      pointer-events: none;
-      opacity: 0.8;
-      background: rgba(0, 0, 0, 0);
-      transform-origin: left center;
-      transform: translate(0px, -14px) scale(0.6);
-    }
     &::placeholder {
       opacity: 0;
     }
@@ -193,18 +183,18 @@ textarea {
     top: 0px;
     background: none;
     width: 100%;
-    font-family: var(--input-font-family);
+    font-family: var(--font);
     padding-left: 40px;
-    font-size: 14px;
-    font-weight: 400;
-    font-variation-settings: 'GRAD' 0, 'XOPQ' 96, 'YOPQ' 100, 'XTRA' 468, 'YTUC' 712, 'YTLC' 514, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+    font-size: 12px;
     line-height: 1.2;
+    font-weight: 400;
+    padding-top: 6px;
+
     color: inherit;
     cursor: pointer;
 
     span {
       display: inline;
-      padding-top: 9px;
     }
 
     + .inputError {
@@ -216,6 +206,7 @@ textarea {
       width: auto;
       margin: 0;
       text-align: left;
+      text-decoration: underline;
     }
 
     &:before {
@@ -224,19 +215,18 @@ textarea {
       position: absolute;
       left: 0px;
       top: 5px;
-      width: 24px;
-      height: 24px;
-      border-radius: 8px;
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
       border: 2px solid var(--white);
-      background: var(--white);
+      background: rgba(255, 255, 255, 0);
     }
   }
 
   &:checked {
     + p {
       &:before {
-        background: var(--white) url('../img/svg/radio.svg') no-repeat center center;
-        background-size: 60% 60%;
+        background: url('../img/svg/checkbox.svg') no-repeat center center/cover;
       }
     }
   }
@@ -245,7 +235,7 @@ textarea {
     + p {
       color: var(--invalid);
       &:before {
-        border: 1px solid var(--invalid);
+        border: 2px solid var(--invalid);
       }
     }
   }
@@ -260,22 +250,18 @@ textarea {
 }
 
 .inputError {
-  display: block;
-  width: 100%;
-  height: 0px;
+  display: inline;
+  width: auto;
+  height: auto;
   position: relative;
   text-align: left;
   overflow: hidden;
   transition: 0.3s;
-  font-size: 14px;
+  font-size: 10px;
   z-index: 10;
   pointer-events: none;
-  span {
-    display: inline-block;
-    position: relative;
-    color: var(--invalid);
-    font-size: 11px;
-  }
+  color: var(--invalid);
+  padding-left: 4px;
 }
 
 /* Chrome, Safari, Edge */
@@ -293,6 +279,23 @@ input[type='search'] {
 
 select.open + .input-icon {
   transform: rotate(180deg);
+}
+
+select.input:required:invalid {
+  color: var(--grey-dark);
+}
+
+select.input {
+  color: var(--black);
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+}
+
+option {
+  color: var(--black);
 }
 
 .select {

@@ -125,6 +125,7 @@ const addErrorHTML = (error, input) => {
   if (!input) return;
 
   const label = input.closest('label');
+  const labelText = label.querySelector('.label__text');
   const existingError = label?.querySelector('.inputError');
 
   if (error) {
@@ -135,10 +136,8 @@ const addErrorHTML = (error, input) => {
       return;
     }
 
-    if (showErrors) {
-      label.insertAdjacentHTML('beforeend', `<span class="inputError"><span>${error}</span></span>`);
-      const newError = label.querySelector('.inputError');
-      newError.style.height = newError.scrollHeight + 'px';
+    if (showErrors && input.type !== 'checkbox' && input.type !== 'radio') {
+      labelText.insertAdjacentHTML('beforeend', `<span class="inputError">${error}</span>`);
     }
     return;
   }
@@ -154,10 +153,7 @@ const removeErrorHTML = input => {
   const error = label?.querySelector('.inputError');
   input.classList.remove('invalid');
   if (error) {
-    error.style.height = '0px';
-    setTimeout(() => {
-      error.remove();
-    }, 300);
+    error.remove();
   }
 };
 

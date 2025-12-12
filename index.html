@@ -29,9 +29,9 @@
 
         <nav class="navigation">
           <ul class="menu">
-            <li><a href="./#hero" class="menu__link" data-scrollto>Продукция</a></li>
-            <li><a href="./#instructions" class="menu__link" data-scrollto>О компании</a></li>
-            <li><a href="./#prizes" class="menu__link" data-scrollto>Контакты</a></li>
+            <li><a href="./#products" class="menu__link" data-scrollto="0">Продукция</a></li>
+            <li><a href="./#about" class="menu__link" data-scrollto="0">О компании</a></li>
+            <li><a href="./#contacts" class="menu__link" data-scrollto="0">Контакты</a></li>
             <li class="header__phones">
               <a href="tel:+78792230435" class="menu__link">+7 879 223-04-35</a>
               <a href="tel:+78792230436" class="menu__link">+7 879 223-04-36</a>
@@ -51,47 +51,116 @@
       <section class="section section--hero" id="hero">
         <div class="container w--900">
           <div class="titles">
-            <img src="./assets/img/svg/logo.svg" alt="" width="430" />
+            <img src="./assets/img/svg/logo.svg" alt="" width="428" />
             <h1 class="title">Лето в каждой бутылке</h1>
             <p class="subtitle">
-              Мы берем лучшее от&nbsp;природы и&nbsp;превращаем в&nbsp;напиток. Наш лимонад подарит Вам яркие ароматы лета и&nbsp;лёгкое настроение.
-              Каждая&nbsp;капля не&nbsp;только радует вкусом, но&nbsp;и&nbsp;заботится о Вашем здоровье.
+              Мы берем лучшее от&nbsp;природы и&nbsp;превращаем в&nbsp;напиток. Наш&nbsp;лимонад&nbsp;подарит&nbsp;Вам яркие ароматы лета
+              и&nbsp;лёгкое настроение. Каждая&nbsp;капля не&nbsp;только радует вкусом, но&nbsp;и&nbsp;заботится о Вашем здоровье.
             </p>
+            <div class="arrows">
+              <button class="arrow" data-arrow-prev></button>
+              <button class="arrow" data-arrow-next></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--SECTION ABOUT-->
+      <section class="section section--about" data-slider data-loop="true" id="about">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/img/about/1.webp" alt="" />
+              <h2 class="title semibold">Высокое качество продукции</h2>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/about/2.webp" alt="" />
+              <h2 class="title semibold">Современное оборудование</h2>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/about/3.webp" alt="" />
+              <h2 class="title semibold">Развитая логистика</h2>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/about/4.webp" alt="" />
+              <h2 class="title semibold">Многолетний опыт</h2>
+            </div>
+          </div>
+        </div>
+        <div class="arrows arrows--white">
+          <button class="arrow" data-arrow-prev></button>
+          <button class="arrow" data-arrow-next></button>
+        </div>
+      </section>
+
+      <!--SECTION MAP-->
+      <section class="section section--map" id="contacts">
+        <div id="map"></div>
+        <div class="container">
+          <div class="contacts">
+            <div class="contacts__menu">
+              <h2>Контакты</h2>
+              <address>г. Минеральные Воды, <br />ул. 3-я Промышленная, д .6, корп. 2</address>
+              <ul>
+                <li>
+                  <a href="https://yandex.ru/maps/?rtext=~44.181241,43.145454" target="_blank" class="contact">
+                    <img src="./assets/img/svg/pin.svg" alt="" />
+                    <span>Построить маршрут</span>
+                    <img src="./assets/img/svg/arrow-blue.svg" alt="" class="arrow-blue" />
+                  </a>
+                </li>
+                <li class="contact">
+                  <img src="./assets/img/svg/phone.svg" alt="" />
+                  <div class="phones">
+                    <a href="tel:+78792230435">+7 879 2230435</a>
+                    <a href="tel:+78792230436">+7 879 2230436</a>
+                  </div>
+                </li>
+                <li>
+                  <a href="mailto:info@ascania-msk.ru" class="contact">
+                    <img src="./assets/img/svg/mail.svg" alt="" />
+                    <span>info@ascania-msk.ru</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="buttons">
+              <button type="button" class="button" data-popup-open="callback"><span>Обратная связь</span></button>
+              <a href="./geography" class="button button--green"><span>География присутствия</span></a>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <!--FOOTER-->
-    <footer class="footer" id="footer">footer</footer>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <p class="copy">&copy; <a href="http://www.ascania-aqua.ru/" class="link">www.ascania-aqua.ru</a>, основано&nbsp;в&nbsp;2010&nbsp;году</p>
+        <a href="mailto:info@ascania-msk.ru" class="link">info@ascania-msk.ru</a>
+      </div>
+    </footer>
 
     <!--POPUPS-->
     <div class="backdrop" data-backdrop>
       <div class="popup" data-popup>
-        <!--register popup-->
-        <div class="popup-content" id="register">
+        <!--callback popup-->
+        <div class="popup-content" id="callback">
           <button class="popup-close" data-popup-close></button>
-          <h2 class="popup-title">Регистрация</h2>
+          <h2 class="title">ОБРАТНАЯ СВЯЗЬ</h2>
+          <p class="subtitle">Если у вас возникли вопросы <br />или&nbsp;предложения, пожалуйста, <br />свяжитесь с&nbsp;нами</p>
 
           <script>
-            const onRegisterFormSubmit = e => {
+            const onCallbackFormSubmit = e => {
               e.preventDefault();
-              window.popup.open('register-success');
+              window.popup.open('callback-success');
             };
           </script>
 
-          <form action="#" class="form" novalidate onsubmit="onRegisterFormSubmit(event)">
-            <label class="label">
-              <span class="label__text">Фамилия</span>
-              <input type="text" name="sername" class="input" required />
-            </label>
+          <form action="#" class="form" novalidate onsubmit="onCallbackFormSubmit(event)">
             <label class="label">
               <span class="label__text">Имя</span>
               <input type="text" name="name" class="input" required />
-            </label>
-            <label class="label">
-              <span class="label__text">Отчество</span>
-              <input type="text" name="middlename" class="input" required />
             </label>
             <label class="label">
               <span class="label__text">E-mail</span>
@@ -99,39 +168,51 @@
             </label>
             <label class="label">
               <span class="label__text">Номер телефона</span>
-              <input type="tel" name="phone" class="input" required="" />
+              <input type="tel" name="phone" class="input" required placeholder="+7 ___ ___-__-__" />
             </label>
+            <label class="label">
+              <span class="label__text">Тема</span>
+
+              <div class="select">
+                <select name="theme" class="input" required>
+                  <option value="" hidden selected>Выберите тему</option>
+                  <option value="Тема 1">Тема 1</option>
+                  <option value="Тема 2">Тема 2</option>
+                  <option value="Тема 3">Тема 3</option>
+                  <option value="Тема 4">Тема 4</option>
+                </select>
+                <span class="input-icon">
+                  <img src="./assets/img/svg/select.svg" alt="" />
+                </span>
+              </div>
+            </label>
+            <label class="label">
+              <span class="label__text">Сообщение</span>
+              <textarea name="message" class="input input--textarea" placeholder="Текст сообщения" required></textarea>
+            </label>
+
             <label class="label label--checkbox">
-              <input type="checkbox" name="agree" class="checkbox" required="" />
-              <span class="label__text">
-                Я согласен с <a href="#" class="link">Правилами акции</a> и&nbsp;на&nbsp;<a href="#" class="link"
-                  >обработку моих персональных данных</a
-                >
-              </span>
+              <input type="checkbox" name="agree" class="radio" required value="Принимаю условия конфедициальности и обработки персональных данных" />
+              <p class="label__text">Я прочитал и принимаю условия <a href="#">конфедициальности и обработки персональных данных*</a></p>
             </label>
-            <button type="submit" class="button button--submit full"><span>Зарегистрироваться</span></button>
+
+            <button type="submit" class="button button--green full"><span>Отправить</span></button>
           </form>
-          <div class="popup-nav">
-            <p>Если вы уже регистрировались, <br />то&nbsp;вам&nbsp;необходимо</p>
-            <button class="popup-nav-link">Войти</button>
-            <p>или</p>
-            <button class="popup-nav-link small">Восстановить пароль</button>
-          </div>
         </div>
 
         <!--register-success popup-->
-        <div class="popup-content" id="register-success">
+        <div class="popup-content" id="callback-success">
           <button class="popup-close" data-popup-close></button>
-          <h2 class="popup-title align-center">Спасибо за регистрацию</h2>
-          <p class="popup-form-subtitle align-center big">Письмо с паролем к вашей учётной записи выслан на&nbsp;указанный вами E-mail.</p>
-          <div class="popup-links">
-            <button type="button" class="button button--submit full" data-popup-close><span>Закрыть</span></button>
-          </div>
+          <h2 class="title">Сообщение отправлено!</h2>
+          <p class="subtitle">Спасибо за&nbsp;вашу заявку, наш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время.</p>
+          <br />
+          <button type="button" class="button button--green full" data-popup-close><span>Закрыть</span></button>
         </div>
       </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://api-maps.yandex.ru/v3/?apikey=91868c41-df81-4491-8223-38e70ef52864&lang=ru_RU"></script>
     <script src="./assets/js/forms.js" type="module" defer></script>
     <script src="./assets/js/scripts.js" type="module" defer></script>
   </body>

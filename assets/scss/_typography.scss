@@ -18,6 +18,7 @@
   line-height: 1.125;
   font-weight: 400;
   &.semibold {
+    font-family: var(--semi);
     font-weight: 500;
   }
   &.bold {
@@ -26,10 +27,17 @@
   &.white {
     color: var(--white);
   }
+
+  @media (max-width: 1023px) {
+    font-size: 40px;
+  }
 }
 
 .subtitle {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.4;
+  @media (max-width: 1023px) {
+    font-size: 16px;
+  }
 }

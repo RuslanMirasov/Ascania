@@ -3,17 +3,44 @@
   background: var(--white) url('../img/sky.gif') no-repeat center top;
   background-size: 100% auto;
 
+  @media (max-width: 1023px) {
+    background-size: 1440px auto;
+  }
+
   .titles {
     margin-top: 150px;
     max-width: 490px;
+    @media (max-width: 1023px) {
+      padding: 0px 14px;
+    }
+    @media (max-width: 767px) {
+      margin-top: 100px;
+    }
     img {
       margin-bottom: 10px;
+      width: 428px;
+      @media (max-width: 1023px) {
+        width: 280px;
+      }
+      @media (max-width: 767px) {
+        margin-bottom: 0px;
+      }
     }
     .title {
       margin: 10px 0px;
+      @media (max-width: 767px) {
+        margin: 0px;
+      }
     }
     .subtitle {
       max-width: 460px;
+      @media (max-width: 767px) {
+        max-width: 314px;
+      }
+    }
+
+    .arrows {
+      margin-top: 18px;
     }
   }
 }

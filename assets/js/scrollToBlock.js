@@ -1,3 +1,13 @@
+const closeMenu = () => {
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.navigation ');
+
+  if (!burger || !menu) return;
+
+  burger.classList.remove('open');
+  menu.classList.remove('open');
+};
+
 export const scrollToBlock = (selector, offset = 0) => {
   const element = document.querySelector(selector);
   if (!element) {
@@ -6,6 +16,8 @@ export const scrollToBlock = (selector, offset = 0) => {
   }
 
   const y = element.getBoundingClientRect().top + window.scrollY + offset;
+
+  closeMenu();
 
   window.scrollTo({
     top: y,

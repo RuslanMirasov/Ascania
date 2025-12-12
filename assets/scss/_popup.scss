@@ -49,7 +49,7 @@ $popup_transition: 0.5s;
     top: -20px;
     width: calc(100% + 40px);
     height: calc(100% + 40px);
-    background: #000;
+    background: #fff;
     opacity: 0.3;
     grid-area: 1 / 1 / 2 / 2;
     @supports (-webkit-touch-callout: none) and (-webkit-overflow-scrolling: touch) {
@@ -67,9 +67,6 @@ $popup_transition: 0.5s;
   user-select: none;
   width: 100%;
   pointer-events: none;
-  @media (max-width: 419px) {
-    width: 100%;
-  }
   &.visible {
     opacity: 1;
     transform: translate(0px, 0px);
@@ -83,37 +80,17 @@ $popup_transition: 0.5s;
   align-items: center;
   align-content: center;
   position: absolute;
-  right: 16px;
-  top: 16px;
-  width: 30px;
-  height: 30px;
+  right: 10px;
+  top: 10px;
+  width: 32px;
+  height: 32px;
   transform: rotate(0deg);
+  transition: 0.3s;
+  background: url('../img/svg/close.svg') no-repeat center center;
   z-index: 2;
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    pointer-events: none;
-    width: 20px;
-    height: 2px;
-    border-radius: 2px;
-    background: var(--gold);
-    transition: 0s;
-    transition: 0.3s;
-  }
-  &:before {
-    transform: rotate(45deg);
-  }
-  &:after {
-    transform: rotate(-45deg);
-  }
+
   &:hover {
-    &:before {
-      transform: rotate(135deg);
-    }
-    &:after {
-      transform: rotate(45deg);
-    }
+    transform: rotate(90deg);
   }
 }
 
@@ -124,183 +101,26 @@ $popup_transition: 0.5s;
   align-items: center;
   align-content: center;
   text-align: center;
-  gap: 24px;
-
+  gap: 14px;
+  color: var(--white);
   position: relative;
   margin: 0 auto;
   width: 100%;
-  max-width: 470px;
+  max-width: 375px;
   pointer-events: all;
   user-select: none;
-  background: radial-gradient(circle, #1e2026 23%, #353c42 100%);
-  border-radius: 30px;
+  background: var(--blue);
+  border-radius: 24px;
   padding: 42px 40px;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.4);
+
+  .title {
+    font-size: 32px;
+    font-weight: 400;
+  }
 
   .subtitle {
-    font-weight: 575;
-    font-size: 24px;
-    font-variation-settings: 'GRAD' 15, 'wdth' 126, 'slnt' 0, 'XOPQ' 96, 'YOPQ' 79, 'XTRA' 468, 'YTUC' 712, 'YTLC' 514, 'YTAS' 750, 'YTDE' -203,
-      'YTFI' 738;
-  }
-
-  .link {
-    font-weight: 400;
-    font-size: 16px;
-    font-variation-settings: 'GRAD' 15, 'wdth' 126, 'slnt' 0, 'XOPQ' 96, 'YOPQ' 79, 'XTRA' 468, 'YTUC' 712, 'YTLC' 514, 'YTAS' 750, 'YTDE' -203,
-      'YTFI' 738;
-  }
-}
-
-.popup-image {
-  position: relative;
-  max-width: 100%;
-  margin: 0 auto;
-  max-height: 240px;
-  &.popup-image--vertical {
-    max-height: 300px;
-  }
-}
-
-.popup-text {
-  font-weight: 575;
-  font-size: 18px;
-  font-variation-settings: 'GRAD' 15, 'wdth' 126, 'slnt' 0, 'XOPQ' 96, 'YOPQ' 79, 'XTRA' 468, 'YTUC' 712, 'YTLC' 514, 'YTAS' 750, 'YTDE' -203,
-    'YTFI' 738;
-}
-
-.promokod {
-  font-family: var(--semibold);
-  font-size: 24px;
-  padding: 16px;
-  display: block;
-  width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background: #353c42;
-  border-radius: 12px;
-  font-variation-settings: 'GRAD' 0, 'wdth' 128, 'slnt' 0, 'XOPQ' 96, 'YOPQ' 100, 'XTRA' 468, 'YTUC' 712, 'YTLC' 514, 'YTAS' 750, 'YTDE' -203,
-    'YTFI' 738;
-}
-
-.register-check-list {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  gap: 24px;
-  counter-reset: my-counter;
-  > li {
-    counter-increment: my-counter;
-    position: relative;
-    padding-left: 40px;
-    font-weight: 400;
-    font-variation-settings: 'GRAD' 0, 'wdth' 128, 'slnt' 0, 'XOPQ' 96, 'YOPQ' 100, 'XTRA' 468, 'YTUC' 712, 'YTLC' 514, 'YTAS' 750, 'YTDE' -203,
-      'YTFI' 738;
     font-size: 14px;
-    text-align: left;
-
-    p {
-      font-weight: 500;
-      font-size: 18px;
-      font-variation-settings: 'GRAD' 10, 'wdth' 150, 'slnt' 0, 'XOPQ' 96, 'YOPQ' 79, 'XTRA' 468, 'YTUC' 712, 'YTLC' 514, 'YTAS' 750, 'YTDE' -203,
-        'YTFI' 738;
-    }
-
-    span {
-      display: block;
-      margin-top: 10px;
-    }
-
-    &::before {
-      content: counter(my-counter, decimal-leading-zero);
-      position: absolute;
-      left: 0px;
-      top: 2px;
-      font-weight: 500;
-      font-size: 18px;
-      font-variation-settings: 'GRAD' 10, 'wdth' 150, 'slnt' 0, 'XOPQ' 96, 'YOPQ' 79, 'XTRA' 468, 'YTUC' 712, 'YTLC' 514, 'YTAS' 750, 'YTDE' -203,
-        'YTFI' 738;
-      line-height: 1;
-      z-index: 0;
-    }
-
-    ul {
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-      gap: 5px;
-      margin: 5px 0px;
-    }
-
-    li {
-      padding-left: 0px;
-      list-style: disc;
-      list-style-position: inside;
-    }
-  }
-}
-
-@media (max-width: 767px) {
-  .popup-image {
-    max-height: 200px;
-    &.popup-image--vertical {
-      max-height: 250px;
-    }
-  }
-
-  .popup-content {
-    gap: 20px;
-    border-radius: 24px;
-    padding: 58px 20px 30px 20px;
-
-    .subtitle {
-      font-size: 16px;
-    }
-
-    .link {
-      font-size: 14px;
-    }
-
-    .label__text .gradient-text br {
-      display: none;
-    }
-  }
-
-  .popup-text {
-    font-size: 12px;
-  }
-
-  .promokod {
-    font-size: 22px;
-    padding: 14px;
-    border-radius: 10px;
-    @supports (-webkit-touch-callout: none) and (-webkit-overflow-scrolling: touch) {
-      padding-top: 20px;
-      padding-bottom: 10px;
-    }
-  }
-
-  .register-check-list {
-    > li {
-      padding-left: 34px;
-
-      span {
-        margin-top: 12px;
-      }
-
-      &::before {
-        display: block;
-        padding-top: 2px;
-        top: 1px;
-        font-size: 18px;
-        @supports (-webkit-touch-callout: none) and (-webkit-overflow-scrolling: touch) {
-          padding-top: 4px;
-          top: -2px;
-        }
-      }
-
-      ul {
-        gap: 5px;
-        margin: 5px 0px;
-      }
-    }
+    margin-bottom: -10px;
   }
 }

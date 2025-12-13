@@ -1,8 +1,5 @@
 .section--hero {
   min-height: 100svh;
-  background: var(--white) url('../img/sky.gif') no-repeat center top;
-  background-size: 100% auto;
-
   @media (max-width: 1023px) {
     background-size: 1440px auto;
   }

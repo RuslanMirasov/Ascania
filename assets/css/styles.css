@@ -1257,6 +1257,7 @@ option {
 
 .section--map {
   height: calc(100svh - 185.2px);
+  min-height: 580px;
   padding: 50px 0px;
 }
 .section--map .container {
@@ -1390,7 +1391,7 @@ option {
   }
 }
 .section--about {
-  height: 100vh;
+  height: 100svh;
 }
 .section--about .swiper {
   width: 100%;
@@ -1497,7 +1498,6 @@ option {
 
 .section--water {
   height: 800px;
-  max-height: 100svh;
   background: var(--white);
 }
 .section--water:before {
@@ -1621,4 +1621,88 @@ option {
 }
 .water-menu .tab-button.blue.active p {
   color: var(--white);
+}
+
+@media (max-width: 1279px), (orientation: portrait) {
+  .section--products {
+    padding: 80px 0px 80px 0px;
+  }
+  .section--products .products {
+    width: 320px;
+    height: 480px;
+    margin-top: 30px;
+  }
+  .section--products .products.pet--33 .swiper-slide img {
+    max-height: 354px;
+  }
+  .section--products .swiper {
+    width: 1600px;
+    height: 480px;
+  }
+  .tab-navigation {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 30px;
+  }
+  .tab-navigation .titles .title,
+  .tab-navigation .titles .subtitle {
+    width: 100%;
+    text-align: center;
+  }
+  .section--water {
+    height: auto;
+  }
+  .section--water:before {
+    height: 798px;
+    background-size: 1280px 800px;
+  }
+  .section--water [data-tab] {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    margin-top: 20px;
+    padding-bottom: 64px;
+    gap: 28px;
+  }
+  .section--water [data-tab] img {
+    order: 1;
+    width: auto;
+    height: 460px;
+  }
+  .water-text {
+    max-width: 572px;
+    padding: 32px;
+    font-size: 16px;
+    order: 2;
+  }
+  .water-text br {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .section--water {
+    min-height: 820px;
+  }
+  .section--water:before {
+    height: 858px;
+    background-size: 1280px 860px;
+  }
+  .section--water [data-tab] img {
+    height: 375px;
+  }
+  .tab-button {
+    min-width: 110px;
+    height: 60px;
+    padding: 5px 24px;
+  }
+  .tab-button p {
+    font-size: 18px;
+  }
+  .tab-button span {
+    top: 3px;
+    font-size: 11px;
+  }
 }

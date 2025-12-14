@@ -1,12 +1,15 @@
 .section--hero {
-  min-height: 100svh;
+  height: auto;
+  padding-bottom: 350px;
   @media (max-width: 1023px) {
     background-size: 1440px auto;
   }
 
   .titles {
     margin-top: 150px;
+    margin-bottom: 100px;
     max-width: 490px;
+    z-index: 2;
     @media (max-width: 1023px) {
       padding: 0px 14px;
     }
@@ -38,6 +41,106 @@
 
     .arrows {
       margin-top: 18px;
+    }
+  }
+}
+
+.hero-images {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  width: 670px;
+  height: 1020px;
+  transform: translate(10%, -100px);
+  z-index: 1;
+  .swiper {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .swiper-slide {
+      opacity: 0 !important;
+      &.swiper-slide-active {
+        opacity: 1 !important;
+      }
+    }
+  }
+}
+
+.animated-scene {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  img,
+  .rotate {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    &.animated-scene__front {
+      animation: upDown 5s ease-in-out infinite;
+    }
+    &.animated-scene__back {
+      animation: upDownRotateLeft 8s ease-in-out infinite;
+    }
+    &.animated-scene__image {
+      animation: upDown 4.5s ease-in-out infinite;
+    }
+  }
+
+  .rotate {
+    transform: rotate(18deg);
+  }
+}
+
+.dop-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  pointer-events: none;
+  .anim-scene {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 320px;
+    height: 320px;
+    pointer-events: none;
+  }
+  &.dop-images--top {
+    left: -70px;
+    top: -20px;
+    .anim-scene {
+      animation: upDownRotateRight 5s ease-in-out infinite;
+    }
+  }
+  &.dop-images--bottom {
+    left: 50%;
+    top: 0px;
+    transform: translate(-650px, 650px);
+    .anim-scene {
+      animation: upDownRotate 6s ease-in-out infinite;
+    }
+  }
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s;
+    &.active {
+      opacity: 1;
     }
   }
 }

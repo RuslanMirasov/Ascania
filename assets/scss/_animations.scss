@@ -34,10 +34,43 @@
 @keyframes upDown {
   0%,
   100% {
-    transform: translate(0px, 0px);
+    transform: translate(0%, 0%);
   }
 
   50% {
-    transform: translate(0px, -20px);
+    transform: translate(0%, -5%);
+  }
+}
+
+@keyframes upDownRotateLeft {
+  0%,
+  100% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(0%, -2%) rotate(-2deg);
+  }
+}
+
+@keyframes upDownRotateRight {
+  0%,
+  100% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(0%, -15%) rotate(30deg);
+  }
+}
+
+@keyframes upDownRotate {
+  0%,
+  100% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(0%, -15%) rotate(-10deg);
   }
 }

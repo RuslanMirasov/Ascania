@@ -48,7 +48,25 @@
     <!--MAIN-->
     <main class="main" id="main">
       <!--SECTION HERO-->
-      <section class="section section--hero" id="hero">
+      <section class="section section--hero" id="hero" data-slider="hero" data-loop="true" data-effect="fade" data-speed="2000" data-autoplay="4000">
+        <div class="dop-images dop-images--top">
+          <div class="anim-scene">
+            <img src="./assets/img/hero/1/top.webp" alt="" class="dop-image-top dop-image-top-1 active" />
+            <img src="./assets/img/hero/2/top.webp" alt="" class="dop-image-top dop-image-top-2" />
+            <img src="./assets/img/hero/3/top.webp" alt="" class="dop-image-top dop-image-top-3" />
+            <img src="./assets/img/hero/4/top.webp" alt="" class="dop-image-top dop-image-top-4" />
+          </div>
+        </div>
+
+        <div class="dop-images dop-images--bottom">
+          <div class="anim-scene">
+            <img src="./assets/img/hero/1/bottom.webp" alt="" class="dop-image-bottom dop-image-bottom-1 active" />
+            <img src="./assets/img/hero/2/bottom.webp" alt="" class="dop-image-bottom dop-image-bottom-2" />
+            <img src="./assets/img/hero/3/bottom.webp" alt="" class="dop-image-bottom dop-image-bottom-3" />
+            <img src="./assets/img/hero/4/bottom.webp" alt="" class="dop-image-bottom dop-image-bottom-4" />
+          </div>
+        </div>
+
         <div class="container w--900">
           <div class="titles">
             <img src="./assets/img/svg/logo.svg" alt="" width="428" />
@@ -62,6 +80,69 @@
               <button class="arrow" data-arrow-next></button>
             </div>
           </div>
+          <div class="hero-images">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" data-number="1">
+                  <div class="animated-scene">
+                    <img src="./assets/img/hero/1/back.webp" alt="" class="animated-scene__back" />
+                    <div class="rotate">
+                      <img src="./assets/img/hero/1/image.webp" alt="" class="animated-scene__image" />
+                    </div>
+                    <img src="./assets/img/hero/1/front.webp" alt="" class="animated-scene__front" />
+                  </div>
+                </div>
+                <div class="swiper-slide" data-number="2">
+                  <div class="animated-scene">
+                    <img src="./assets/img/hero/2/back.webp" alt="" class="animated-scene__back" />
+                    <div class="rotate">
+                      <img src="./assets/img/hero/2/image.webp" alt="" class="animated-scene__image" />
+                    </div>
+                    <img src="./assets/img/hero/2/front.webp" alt="" class="animated-scene__front" />
+                  </div>
+                </div>
+                <div class="swiper-slide" data-number="3">
+                  <div class="animated-scene">
+                    <img src="./assets/img/hero/3/back.webp" alt="" class="animated-scene__back" />
+                    <div class="rotate">
+                      <img src="./assets/img/hero/3/image.webp" alt="" class="animated-scene__image" />
+                    </div>
+                    <img src="./assets/img/hero/3/front.webp" alt="" class="animated-scene__front" />
+                  </div>
+                </div>
+                <div class="swiper-slide" data-number="4">
+                  <div class="animated-scene">
+                    <img src="./assets/img/hero/4/back.webp" alt="" class="animated-scene__back" />
+                    <div class="rotate">
+                      <img src="./assets/img/hero/4/image.webp" alt="" class="animated-scene__image" />
+                    </div>
+                    <img src="./assets/img/hero/4/front.webp" alt="" class="animated-scene__front" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--parallax">
+        <div class="mountain" data-parallax>
+          <div class="fix-area mountain--back" data-speed="2.5" data-percent="2"></div>
+          <div class="fix-area mountain--front" data-speed="2" data-percent="2"></div>
+        </div>
+        <div class="parallax-description" data-parallax>
+          <div class="fix-area" data-speed="1" data-percent="0.36">
+            <p>
+              Лимонады «Ascania» создаются на&nbsp;основе чистой горной воды, сахарного сиропа и&nbsp;натуральных экстрактов фруктов, трав
+              и&nbsp;ягод.
+            </p>
+          </div>
+        </div>
+        <img src="./assets/img/garden.webp" alt="" class="garden" />
+        <div class="parallax-title">
+          <h2 class="title white semi left">Натуральные</h2>
+          <img src="./assets/img/logo-full.webp" alt="" />
+          <h2 class="title white semi right">ингредиенты</h2>
         </div>
       </section>
 

@@ -131,6 +131,27 @@
   }
 }
 
+.scroll-down-wrapper {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  height: calc(100svh - 40px);
+  max-height: 1000px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  pointer-events: none;
+  @media (max-width: 1279px) {
+    max-height: 768px;
+  }
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
 .scroll-down {
   display: flex;
   position: relative;
@@ -143,6 +164,7 @@
   margin-top: 20px;
   animation: scrollDown 2s ease-in-out infinite;
   z-index: 2;
+  pointer-events: all;
 
   img,
   svg {

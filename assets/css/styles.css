@@ -676,6 +676,31 @@ menu {
   font-weight: 400;
 }
 
+.scroll-down-wrapper {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  height: calc(100svh - 40px);
+  max-height: 1000px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  pointer-events: none;
+}
+@media (max-width: 1279px) {
+  .scroll-down-wrapper {
+    max-height: 768px;
+  }
+}
+@media (max-width: 1023px) {
+  .scroll-down-wrapper {
+    display: none;
+  }
+}
+
 .scroll-down {
   display: flex;
   position: relative;
@@ -688,6 +713,7 @@ menu {
   margin-top: 20px;
   animation: scrollDown 2s ease-in-out infinite;
   z-index: 2;
+  pointer-events: all;
 }
 .scroll-down img,
 .scroll-down svg {
@@ -1384,6 +1410,77 @@ option {
   opacity: 1;
 }
 
+@media (max-width: 1279px) {
+  .section--hero {
+    padding-bottom: 100px;
+  }
+  .section--hero .titles {
+    max-width: 490px;
+  }
+  .hero-images {
+    width: 450px;
+    height: 686px;
+    transform: translate(10%, -100px);
+    z-index: 1;
+  }
+  .dop-images {
+    width: 220px;
+    height: 220px;
+  }
+  .dop-images .anim-scene {
+    width: 220px;
+    height: 220px;
+  }
+  .dop-images.dop-images--top {
+    left: -70px;
+    top: -20px;
+  }
+  .dop-images.dop-images--bottom {
+    left: 50%;
+    top: 0px;
+    transform: translate(-600px, 620px);
+  }
+}
+@media (max-width: 1023px) {
+  .section--hero {
+    padding-bottom: 100px;
+  }
+  .section--hero .titles {
+    max-width: 336px;
+  }
+  .hero-images {
+    width: 450px;
+    height: 686px;
+    transform: translate(-10%, -100px);
+    z-index: 1;
+  }
+  .dop-images {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .section--hero {
+    padding-bottom: 40px;
+  }
+  .section--hero .titles {
+    max-width: 100%;
+  }
+  .hero-images {
+    position: relative;
+    left: 50%;
+    top: auto;
+    width: 370px;
+    height: 568px;
+    transform: translate(-50%, 0px);
+    z-index: 1;
+    margin-top: -100px;
+    overflow: visible;
+  }
+  .hero-images .swiper,
+  .hero-images .swiper-wrapper {
+    overflow: visible;
+  }
+}
 .section--map {
   height: calc(100svh - 185.2px);
   min-height: 580px;

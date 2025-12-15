@@ -1252,6 +1252,7 @@ option {
 .section--hero {
   height: auto;
   padding-bottom: 350px;
+  z-index: 2;
 }
 @media (max-width: 1023px) {
   .section--hero {
@@ -1932,6 +1933,15 @@ option {
     font-size: 11px;
   }
 }
+.section--parallax {
+  z-index: 1;
+  margin-top: -15%;
+}
+@media (min-width: 1600px) {
+  .section--parallax {
+    margin-top: -10%;
+  }
+}
 .section--parallax:before {
   content: "";
   width: 100%;
@@ -1940,7 +1950,7 @@ option {
   left: 0px;
   bottom: 0px;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -2024,66 +2034,26 @@ option {
   }
 }
 
-.mountain {
-  display: block;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100svh;
-  z-index: 0;
-}
-.mountain:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 150%;
-  background: #9fbb64;
-}
-.mountain .fix-area {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 150%;
-  transition: transform 2s cubic-bezier(0, 0.49, 0, 1) 0s;
-  will-change: transform;
-}
-.mountain .fix-area.mountain--back {
-  background: url("../img/mountain.webp") no-repeat center top/cover;
-}
-.mountain .fix-area.mountain--front {
-  background: url("../img/mountain2.webp") no-repeat center top/cover;
-}
-
-.parallax-description {
-  display: block;
-  position: absolute;
-  left: 0px;
-  top: -200px;
-  width: 100%;
-  height: 100svh;
-  pointer-events: none;
-  padding: 24px;
-}
-@media (max-width: 767px) {
-  .parallax-description {
-    top: -100px;
-  }
-}
-.parallax-description .fix-area {
+.fix-area {
   display: flex;
   justify-content: center;
-  align-items: center;
-  align-content: center;
+  align-items: flex-start;
   position: absolute;
-  inset: 0px;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0, 0.49, 0, 1) 0s;
   will-change: transform;
-  transition: transform 2s cubic-bezier(0, 0.49, 0, 1) 0s;
+  pointer-events: none;
 }
-.parallax-description .fix-area p {
+.fix-area.mountain--back {
+  background: url("../img/mountain.webp") no-repeat center top/cover;
+}
+.fix-area.mountain--front {
+  background: url("../img/mountain2.webp") no-repeat center top/cover;
+}
+.fix-area p {
   padding: 48px 42px;
   border-radius: 30px;
   display: block;
@@ -2092,12 +2062,25 @@ option {
   background: rgba(255, 255, 255, 0.7);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+  margin-top: 11%;
+}
+@media (max-width: 1279px) {
+  .fix-area p {
+    margin-top: 15%;
+  }
+}
+@media (max-width: 1023px) {
+  .fix-area p {
+    margin-top: 20%;
+  }
 }
 @media (max-width: 767px) {
-  .parallax-description .fix-area p {
+  .fix-area p {
     text-align: center;
     font-size: 16px;
     padding: 46px 24px;
-    max-width: calc(100% - 48px);
+    width: calc(100% - 48px);
+    max-width: 360px;
+    margin-top: 30%;
   }
 }

@@ -91,6 +91,11 @@ menu {
     background: url('../img/sky.webp') no-repeat center top/cover;
     //background: #eee;
   }
+  &.no-bg {
+    &:before {
+      content: none;
+    }
+  }
 }
 
 .section {

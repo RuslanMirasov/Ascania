@@ -230,6 +230,9 @@ menu {
   top: 0px;
   background: url("../img/sky.webp") no-repeat center top/cover;
 }
+.main.no-bg:before {
+  content: none;
+}
 
 .section {
   position: relative;
@@ -2083,4 +2086,22 @@ option {
     max-width: 360px;
     margin-top: 30%;
   }
+}
+
+.section--geography {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.geography {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  flex: 1;
+  background: #eee;
 }

@@ -4,6 +4,7 @@ import { initSliders, onHeroSlideChange } from './sliders.js';
 import { initScrollToBlock } from './scrollToBlock.js';
 import { initInputMasks } from './inputMasks.js';
 import { initYandexMap } from './yandex-map.js';
+import { initGeography } from './geography.js';
 import { initTabs } from './tabs.js';
 import { initParallax } from './parallax.js';
 
@@ -14,7 +15,8 @@ initNavigationMenu();
 initSliders();
 initScrollToBlock();
 initInputMasks();
-//initYandexMap();
+initYandexMap();
+initGeography();
 initTabs();
 
 setTimeout(() => {

@@ -106,67 +106,255 @@
     },
     {
       "description": "Россия · основной",
-      "coordinates": [70, 40]
+      "coordinates": [56.250203, 58.010531]
     },
     {
       "description": "Россия · основной",
-      "coordinates": [70, 40]
+      "coordinates": [72.602981, 61.0998]
     },
     {
       "description": "Россия · основной",
-      "coordinates": [70, 40]
+      "coordinates": [61.253581, 54.441902]
     },
     {
       "description": "Россия · основной",
-      "coordinates": [70, 40]
+      "coordinates": [142.737971, 46.959105]
     },
     {
       "description": "Россия · основной",
-      "coordinates": [70, 40]
+      "coordinates": [44.66778, 43.036708]
     },
     {
       "description": "Россия · основной",
-      "coordinates": [70, 40]
+      "coordinates": [43.60707, 43.485292]
     },
     {
       "description": "Россия · основной",
-      "coordinates": [70, 40]
+      "coordinates": [41.132264, 45.000311]
     },
     {
       "description": "Россия · основной",
-      "coordinates": [70, 40]
+      "coordinates": [42.046811, 44.226857]
     },
     {
       "description": "Россия · основной",
-      "coordinates": [70, 40]
+      "coordinates": [37.767966, 44.723902]
     },
     {
       "description": "Россия · основной",
-      "coordinates": [70, 40]
+      "coordinates": [44.513341, 48.707996]
     },
     {
       "description": "Россия · основной",
-      "coordinates": [70, 40]
+      "coordinates": [48.040803, 46.349783]
     },
     {
       "description": "Россия · основной",
-      "coordinates": [70, 40]
+      "coordinates": [39.200244, 51.660801]
     },
     {
       "description": "Россия · основной",
-      "coordinates": [70, 40]
+      "coordinates": [37.835052, 51.296699]
     },
     {
       "description": "Россия · основной",
-      "coordinates": [70, 40]
+      "coordinates": [43.059378, 44.048607]
     },
     {
       "description": "Россия · основной",
-      "coordinates": [70, 40]
+      "coordinates": [41.969023, 45.044807]
     },
     {
-      "description": "ssssssssssssssssssss",
-      "coordinates": [70, 40]
+      "description": "Россия · основной",
+      "coordinates": [47.504681, 42.984894]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [45.698145, 43.317817]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [46.034277, 51.533606]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [65.534279, 57.153004]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [45.174866, 54.180801]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [43.93609, 56.29649]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [133.419981, 45.477999]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [82.935721, 55.008416]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [127.527173, 50.290601]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [73.396309, 61.254064]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [55.096881, 51.7682]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [55.796291, 52.756525]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [88.189279, 69.3558]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [39.884473, 57.626109]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [131.885462, 43.115567]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [45.004631, 53.200121]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [34.371661, 53.252105]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [40.406579, 56.129105]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [35.78328, 54.033304]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [39.82088, 64.5635]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [33.074887, 68.970702]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [20.452184, 54.710404]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [36.192586, 51.730404]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [40.926877, 57.767901]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [39.594007, 52.610019]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [37.618781, 54.196101]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [36.786478, 46.755904]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [35.367585, 46.848908]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [37.543377, 47.097103]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [39.307784, 48.573999]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [38.011086, 48.304203]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [37.802785, 48.015903]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [61.436786, 55.164406]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [37.909686, 59.126903]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [104.304985, 52.286901]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [129.733087, 62.033902]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [55.949991, 53.633303]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [113.49999, 52.033301]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [55.972086, 54.738805]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [39.723089, 43.585502]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [49.108787, 55.796298]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [73.324187, 54.988503]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [38.975283, 45.035501]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [60.605687, 56.838906]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [50.099991, 53.195899]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [39.701489, 47.235701]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [30.335085, 59.934303]
+    },
+    {
+      "description": "Россия · основной",
+      "coordinates": [37.617586, 55.755805]
     }
   ]
 }

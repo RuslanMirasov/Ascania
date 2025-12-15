@@ -1077,6 +1077,9 @@ option {
   padding: 80px 0px;
   background: var(--white);
 }
+.footer.footer--mini {
+  padding: 50px 0px;
+}
 .footer .container {
   display: flex;
   justify-content: space-between;
@@ -1620,6 +1623,10 @@ option {
     font-size: 16px;
   }
 }
+.ymaps3x0--zoom-control {
+  flex-direction: column !important;
+}
+
 .section--about {
   height: 100svh;
 }

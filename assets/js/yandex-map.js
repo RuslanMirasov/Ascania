@@ -31,8 +31,8 @@ export const initYandexMap = () => {
 
     const img = document.createElement('img');
     img.src = './assets/img/pin.svg';
-    img.style.width = '71px';
-    img.style.height = '89px';
+    img.style.width = '90px';
+    img.style.height = '77px';
     img.style.transform = 'translate(-50%, -100%)';
 
     const marker = new YMapMarker({ coordinates: coords }, img);

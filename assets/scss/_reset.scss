@@ -90,6 +90,9 @@ menu {
     top: 0px;
     background: url('../img/sky.webp') no-repeat center top/cover;
     //background: #eee;
+    @media (max-width: 767px) {
+      background: url('../img/sky-mobil.gif') no-repeat center top/cover;
+    }
   }
   &.no-bg {
     &:before {

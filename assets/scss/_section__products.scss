@@ -266,8 +266,8 @@
     height: auto;
 
     &:before {
-      height: 798px;
-      background-size: 1280px 800px;
+      background: var(--white) url('../img/water-mobil.gif') no-repeat center bottom;
+      background-size: 100% 800px;
     }
 
     [data-tab] {

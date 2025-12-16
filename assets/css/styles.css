@@ -230,6 +230,11 @@ menu {
   top: 0px;
   background: url("../img/sky.webp") no-repeat center top/cover;
 }
+@media (max-width: 767px) {
+  .main:before {
+    background: url("../img/sky-mobil.gif") no-repeat center top/cover;
+  }
+}
 .main.no-bg:before {
   content: none;
 }
@@ -1892,8 +1897,8 @@ option {
     height: auto;
   }
   .section--water:before {
-    height: 798px;
-    background-size: 1280px 800px;
+    background: var(--white) url("../img/water-mobil.gif") no-repeat center bottom;
+    background-size: 100% 800px;
   }
   .section--water [data-tab] {
     flex-direction: column;

@@ -87,6 +87,13 @@
       height: 100%;
     }
   }
+
+  .subtitle[data-tab] {
+    justify-content: flex-start;
+    @media (max-width: 1279px) {
+      justify-content: center;
+    }
+  }
 }
 
 .section--water {

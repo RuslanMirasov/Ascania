@@ -330,7 +330,7 @@ menu {
   justify-content: center;
   align-items: center;
   align-content: center;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
   opacity: 0;
   pointer-events: none;
 }
@@ -1736,6 +1736,14 @@ option {
 .section--products .swiper img {
   margin: auto;
   height: 100%;
+}
+.section--products .subtitle[data-tab] {
+  justify-content: flex-start;
+}
+@media (max-width: 1279px) {
+  .section--products .subtitle[data-tab] {
+    justify-content: center;
+  }
 }
 
 .section--water {

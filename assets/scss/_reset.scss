@@ -91,8 +91,11 @@ menu {
     background: url('../img/sky.webp') no-repeat center top/cover;
 
     @media (max-width: 767px) {
-      height: 130svh;
-      background: url('../img/sky-mobil.gif') no-repeat center top/cover;
+      min-height: 800px;
+      max-height: 800px;
+      height: 800px;
+      background: url('../img/sky-mobil.gif') no-repeat center top;
+      background-size: auto 800px;
       //background: #eee;
     }
   }

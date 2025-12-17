@@ -2,52 +2,61 @@ export const initParallax = () => {
   const sections = document.querySelectorAll('[data-parallax]');
   if (!sections.length) return;
 
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
   const items = [];
 
   sections.forEach(section => {
-    const startY = section.getBoundingClientRect().top + window.scrollY;
+    const sectionItems = section.querySelectorAll('[data-parallax-item]');
+    if (!sectionItems.length) return;
 
-    let sectionHeight = section.offsetHeight;
-
-    const children = section.querySelectorAll('[data-percent]');
-
-    children.forEach(el => {
-      const percent = parseFloat(el.dataset.percent) || 1;
-      const speed = parseFloat(el.dataset.speed) || 1;
+    sectionItems.forEach(el => {
+      el.style.setProperty('--speed', el.dataset.speed || 1);
 
       items.push({
         el,
-        startY,
-        get limit() {
-          return sectionHeight * percent;
-        },
-        speed,
         section,
-        updateHeight() {
-          sectionHeight = section.offsetHeight;
-        },
+        percent: parseFloat(el.dataset.percent) || 1,
+        start: 0,
+        limit: 0,
       });
     });
   });
 
-  const loop = () => {
-    const scrollY = window.scrollY;
-
+  const recalc = () => {
     items.forEach(item => {
-      let translate = scrollY - item.startY;
-
-      if (translate < 0) translate = 0;
-      if (translate > item.limit) translate = item.limit;
-
-      item.el.style.transform = `translateY(${translate / item.speed}px)`;
+      const rect = item.section.getBoundingClientRect();
+      item.start = rect.top + window.scrollY;
+      item.limit = item.section.offsetHeight * item.percent;
     });
-
-    requestAnimationFrame(loop);
   };
 
-  requestAnimationFrame(loop);
+  recalc();
 
-  window.addEventListener('resize', () => {
-    items.forEach(item => item.updateHeight());
-  });
+  let scrollY = window.scrollY;
+  let ticking = false;
+
+  const update = () => {
+    items.forEach(item => {
+      let offset = scrollY - item.start;
+
+      if (offset < 0) offset = 0;
+      if (offset > item.limit) offset = item.limit;
+
+      item.el.style.setProperty('--offset', `${offset}px`);
+    });
+
+    ticking = false;
+  };
+
+  const onScroll = () => {
+    scrollY = window.scrollY;
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', recalc);
 };

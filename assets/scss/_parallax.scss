@@ -1,0 +1,7 @@
+[data-parallax-item] {
+  --offset: 0px;
+  --speed: 1;
+
+  will-change: transform;
+  transform: translate3d(0, calc(var(--offset) / var(--speed)), 0);
+}

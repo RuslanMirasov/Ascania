@@ -89,9 +89,11 @@ menu {
     left: 0px;
     top: 0px;
     background: url('../img/sky.webp') no-repeat center top/cover;
-    //background: #eee;
+
     @media (max-width: 767px) {
+      height: 130svh;
       background: url('../img/sky-mobil.gif') no-repeat center top/cover;
+      //background: #eee;
     }
   }
   &.no-bg {

@@ -7,7 +7,7 @@
   &:before {
     content: '';
     width: 100%;
-    height: 46%;
+    height: 47%;
     position: absolute;
     left: 0px;
     bottom: 0px;
@@ -112,7 +112,7 @@
     margin: 0 auto;
     max-width: 570px;
     background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(5px);
+    //backdrop-filter: blur(5px);
     margin-top: 11%;
     @media (max-width: 1279px) {
       margin-top: 15%;

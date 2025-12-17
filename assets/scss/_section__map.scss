@@ -124,7 +124,7 @@
 @media (max-width: 767px), (orientation: portrait) {
   .section--map {
     height: 820px;
-    padding: 40px 0px;
+    padding: 40px 0px 20px 0px;
   }
   .contacts {
     margin-left: auto;
@@ -141,6 +141,10 @@
 
   .contacts address {
     font-size: 16px;
+  }
+
+  #map {
+    background: url('../img/map-mobil.webp') no-repeat center top/cover;
   }
 }
 

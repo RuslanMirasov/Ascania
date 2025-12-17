@@ -676,6 +676,9 @@ menu {
 .button.button--green {
   background: var(--green);
 }
+.button.button--green-dark {
+  background: var(--green-dark);
+}
 .button.big {
   min-height: 70px;
 }

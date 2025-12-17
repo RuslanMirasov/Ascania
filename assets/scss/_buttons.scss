@@ -122,6 +122,10 @@
     background: var(--green);
   }
 
+  &.button--green-dark {
+    background: var(--green-dark);
+  }
+
   &.big {
     min-height: 70px;
     span {

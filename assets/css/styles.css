@@ -2165,6 +2165,7 @@ option {
   display: flex;
   position: relative;
   width: 100%;
+  min-height: 420px;
   justify-content: center;
   align-items: center;
   align-content: center;

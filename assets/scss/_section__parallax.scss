@@ -113,6 +113,8 @@
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(5px);
     margin-top: 11%;
+    transition: none;
+    will-change: transform;
     @media (max-width: 1279px) {
       margin-top: 15%;
     }

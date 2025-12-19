@@ -2116,7 +2116,7 @@ option {
   pointer-events: none;
 }
 .fix-area.mountain--back {
-  background: url("../img/mountain.webp") no-repeat center top/cover;
+  background: url("../img/mountain.webp") no-repeat center 100px/cover;
 }
 .fix-area.mountain--front {
   background: url("../img/mountain2.webp") no-repeat center top/cover;
